@@ -111,7 +111,7 @@ graph TD
 | Variant | applicationId | Capabilities |
 |---|---|---|
 | **Free** | `com.example.xpenstracker` | GPay notification capture |
-| **Pro** | `com.example.xpenstracker.pro` | GPay **+** UAE bank SMS **+** self-learning queue |
+| **Pro** | `com.example.xpenstracker.pro` | UAE bank SMS **+** self-learning queue *(in progress)* |
 
 ---
 

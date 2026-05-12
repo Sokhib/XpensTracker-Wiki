@@ -6,6 +6,8 @@
 
 **Effortless expense tracking for the UAE — Google Pay notifications and bank SMS become expenses, automatically.**
 
+**100% offline  ·  Zero data collection  ·  Nothing ever leaves your phone.**
+
 ![Android](https://img.shields.io/badge/Android-9%2B-3DDC84?logo=android&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.3.20-7F52FF?logo=kotlin&logoColor=white)
 ![Compose](https://img.shields.io/badge/Jetpack%20Compose-2026.03-4285F4?logo=jetpackcompose&logoColor=white)

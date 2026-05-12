@@ -46,10 +46,12 @@
   <tr>
     <td align="center"><img src="docs/media/lighthome.png" width="240" alt="Dashboard" /><br /><sub><b>Dashboard</b><br />Balance, pie, recent</sub></td>
     <td align="center"><img src="docs/media/lightledger.png" width="240" alt="Ledger" /><br /><sub><b>Ledger</b><br />Chip filters, search</sub></td>
+    <td align="center"><img src="docs/media/lightfilter.png" width="240" alt="Filter sheet" /><br /><sub><b>Filter</b><br />Multi-dimensional filtering</sub></td>
   </tr>
   <tr>
     <td align="center"><img src="docs/media/lightinsights.png" width="240" alt="Insights" /><br /><sub><b>Insights</b><br />Trends & observations</sub></td>
     <td align="center"><img src="docs/media/lightsettings.png" width="240" alt="Settings" /><br /><sub><b>Settings</b><br />Theme, profile, perms</sub></td>
+    <td></td>
   </tr>
 </table>
 
@@ -59,10 +61,12 @@
   <tr>
     <td align="center"><img src="docs/media/darkhome.png" width="240" alt="Dashboard (dark)" /><br /><sub><b>Dashboard</b></sub></td>
     <td align="center"><img src="docs/media/darkledger.png" width="240" alt="Ledger (dark)" /><br /><sub><b>Ledger</b></sub></td>
+    <td align="center"><img src="docs/media/darkfilter.png" width="240" alt="Filter sheet (dark)" /><br /><sub><b>Filter</b></sub></td>
   </tr>
   <tr>
     <td align="center"><img src="docs/media/darkinsights.png" width="240" alt="Insights (dark)" /><br /><sub><b>Insights</b></sub></td>
     <td align="center"><img src="docs/media/darksettings.png" width="240" alt="Settings (dark)" /><br /><sub><b>Settings</b></sub></td>
+    <td></td>
   </tr>
 </table>
 
@@ -97,26 +101,6 @@ graph TD
     class app,home,expenses,analytics,sms,data,ui android
 ```
 
-<details>
-<summary><b>SMS → Expense pipeline (Pro)</b></summary>
-
-```mermaid
-flowchart TD
-    A[Bank SMS] --> B{Learned pattern?}
-    B -- yes --> C[Apply learned regex]
-    B -- no --> D{Bundled bank config?}
-    D -- yes --> E[Apply bank regex]
-    D -- no --> F[Unmatched queue]
-    C & E --> G{Amount extracted?}
-    G -- yes --> H[Classify + Insert]
-    G -- no --> F
-    F --> J[User opens row] --> K[GenericFallbackParser pre-fills] --> L[User saves]
-    L --> M{≥ 3 saves for sender?}
-    M -- yes --> N[Derive learned pattern]
-```
-
-</details>
-
 ---
 
 ## Build variants
@@ -130,52 +114,9 @@ flowchart TD
 
 ---
 
-## Design system — AquaTheme
-
-Custom Material 3 theme inspired by Dubai / MENA warmth: gold, sage, desert rose.
-
-**Shams (light)**
-
-| Primary | Secondary | Tertiary | Surface | On Surface |
-|---|---|---|---|---|
-| ![](https://placehold.co/20x20/B98441/B98441.png) `#B98441` | ![](https://placehold.co/20x20/48886E/48886E.png) `#48886E` | ![](https://placehold.co/20x20/C45D46/C45D46.png) `#C45D46` | ![](https://placehold.co/20x20/FAF7F0/FAF7F0.png) `#FAF7F0` | ![](https://placehold.co/20x20/1C1E32/1C1E32.png) `#1C1E32` |
-
-**Layl (dark)**
-
-| Primary | Secondary | Tertiary | Surface | On Surface |
-|---|---|---|---|---|
-| ![](https://placehold.co/20x20/E8B765/E8B765.png) `#E8B765` | ![](https://placehold.co/20x20/9CD9B8/9CD9B8.png) `#9CD9B8` | ![](https://placehold.co/20x20/E29785/E29785.png) `#E29785` | ![](https://placehold.co/20x20/181824/181824.png) `#181824` | ![](https://placehold.co/20x20/FAF6EC/FAF6EC.png) `#FAF6EC` |
-
-<details>
-<summary><b>Category palette · typography · spacing · components</b></summary>
-
-### Category colors
-
-| | Food | Transport | Shopping | Bills | Entertainment | Health | Education | Grocery |
-|---|---|---|---|---|---|---|---|---|
-| Light | ![](https://placehold.co/16x16/BC6A47/BC6A47.png) | ![](https://placehold.co/16x16/3F6B90/3F6B90.png) | ![](https://placehold.co/16x16/9B5A85/9B5A85.png) | ![](https://placehold.co/16x16/C25E54/C25E54.png) | ![](https://placehold.co/16x16/B0983F/B0983F.png) | ![](https://placehold.co/16x16/4D8C72/4D8C72.png) | ![](https://placehold.co/16x16/5976B3/5976B3.png) | ![](https://placehold.co/16x16/3F8C5C/3F8C5C.png) |
-| Dark | ![](https://placehold.co/16x16/E09878/E09878.png) | ![](https://placehold.co/16x16/8AADC5/8AADC5.png) | ![](https://placehold.co/16x16/C79BBE/C79BBE.png) | ![](https://placehold.co/16x16/E39089/E39089.png) | ![](https://placehold.co/16x16/CFC274/CFC274.png) | ![](https://placehold.co/16x16/9CD9B8/9CD9B8.png) | ![](https://placehold.co/16x16/8AA2D4/8AA2D4.png) | ![](https://placehold.co/16x16/7BCC8B/7BCC8B.png) |
-
-### Typography
-
-- **Fraunces** *(variable serif)* — display headlines + monetary amounts (`amount` style at 22sp)
-- **Figtree** *(variable sans)* — body & labels, weights 400–700
-
-### Spacing scale
-
-`xxs 2` · `xs 4` · `sm 8` · `md 12` · `lg 16` · `xl 24` · `xxl 32` · `xxxl 48` · `xxxxl 64` (dp)
-
-### Components
-
-`AquaCard` · `AquaTopBar` · `AquaBottomBar` · `AquaButton` · `AquaTextField` · `AquaSearchField` · `AquaChip` · `AquaPieChart` · `AquaHeroBalanceCard` · `AquaStatPill` · `AquaMiniStat` · `AquaCategoryAvatar` · `AquaExpenseRow` · `AquaBadge` · `AquaBanner` · `AquaShimmer` · `AquaEmptyState` · `AquaObservationCard` · `AquaDivider`
-
-</details>
-
----
-
 ## Tech stack
 
-Jetpack Compose (BOM 2026.03.01) · Material 3 · Hilt 2.59.2 · Room 2.8.4 · DataStore 1.2.1 · Vico 3.0.3 · Lucide Compose 1.1.0 · Kotlin 2.3.20 · KSP · Min SDK 28 · Target/Compile SDK 36
+Jetpack Compose (BOM 2026.03.01) · Material 3 · Hilt 2.59.2 · Room 2.8.4 · DataStore 1.2.1 · Vico 3.0.3 · Kotlin 2.3.20 · KSP · Min SDK 28 · Target/Compile SDK 36
 
 <details>
 <summary><b>Project structure</b></summary>
@@ -187,7 +128,7 @@ app/                  Main activity, navigation, global ViewModels
   src/pro/            SMS listener + layered classifier
 core/domain/          Pure Kotlin: entities, repos, use cases
 core/data/            Room DB, DataStore, classifier rules
-core/ui/              AquaTheme + shared Compose components
+core/ui/              Theme + shared Compose components
 core/sms-parsing/     Bank pattern catalog, regex parser, learned-pattern store
 feature/home/         Dashboard + unmatched queue (Pro)
 feature/expenses/     Expense list, filters, add/edit

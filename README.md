@@ -16,10 +16,9 @@
 
 <br />
 
-<!-- TODO: replace href="#" below with your Free / Pro APK download URLs -->
-<a href="#"><img src="https://img.shields.io/badge/Download-Free%20APK-BB9844?style=for-the-badge&logo=android&logoColor=white" alt="Download Free APK" /></a>
+<a href="https://github.com/Sokhib/XpensTracker-Wiki/releases/latest"><img src="https://img.shields.io/badge/Download-Free%20APK-BB9844?style=for-the-badge&logo=android&logoColor=white" alt="Download Free APK" /></a>
 &nbsp;
-<a href="#"><img src="https://img.shields.io/badge/Download-Pro%20APK-9C6830?style=for-the-badge&logo=android&logoColor=white" alt="Download Pro APK" /></a>
+<img src="https://img.shields.io/badge/Pro%20APK-Work%20in%20Progress-9E9E9E?style=for-the-badge&logo=android&logoColor=white" alt="Pro APK — Work in Progress" />
 
 <br /><br />
 

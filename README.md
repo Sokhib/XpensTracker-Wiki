@@ -33,7 +33,7 @@
 
 - **Auto-capture from Google Pay** — notifications are parsed on-device into expenses. Zero taps.
 - **Bank SMS parsing *(Pro)*** — Emirates NBD, Emirates Islamic, ADCB, FAB out of the box; Mashreq, DIB, RAKBANK, CBD, ADIB attributed by sender.
-- **Self-learning unmatched queue** — unparseable SMS land in a queue; resolve 3 from the same sender and the app learns its pattern.
+- **Learns from your edits** — change a category on any expense (auto-captured, manually edited, or resolved from the review queue) and the app remembers it. Next time that merchant shows up, it's categorized correctly automatically.
 - **Smart categorization** — UAE merchant catalog (Carrefour, Lulu, Talabat, Careem, DEWA, Etisalat…) + 100+ keyword rules.
 - **Insights** — monthly trends, observation cards, category breakdowns.
 - **Filters** — chip-based filtering by category, bank, and payment method.

@@ -22,7 +22,7 @@
 
 <br /><br />
 
-<video src="https://github.com/user-attachments/assets/bcc0c3a7-0ec0-4576-ad05-e4bdef923317" controls autoplay loop muted playsinline width="320"></video>
+<video src="https://github.com/Sokhib/XpensTracker-Wiki/raw/main/docs/media/demo.mp4" controls autoplay loop muted playsinline width="320"></video>
 
 </div>
 

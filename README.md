@@ -61,13 +61,13 @@
 
 <table>
   <tr>
-    <td align="center"><img src="docs/media/darkhome.png" width="240" alt="Dashboard (dark)" /><br /><sub><b>Dashboard</b></sub></td>
-    <td align="center"><img src="docs/media/darkledger.png" width="240" alt="Ledger (dark)" /><br /><sub><b>Ledger</b></sub></td>
-    <td align="center"><img src="docs/media/darkfilter.png" width="240" alt="Filter sheet (dark)" /><br /><sub><b>Filter</b></sub></td>
+    <td align="center"><img src="docs/media/darkhome.png" width="240" alt="Dashboard (dark)" /><br /><sub><b>Dashboard</b><br />Balance, pie, recent</sub></td>
+    <td align="center"><img src="docs/media/darkledger.png" width="240" alt="Ledger (dark)" /><br /><sub><b>Ledger</b><br />Chip filters, search</sub></td>
+    <td align="center"><img src="docs/media/darkfilter.png" width="240" alt="Filter sheet (dark)" /><br /><sub><b>Filter</b><br />Multi-dimensional filtering</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="docs/media/darkinsights.png" width="240" alt="Insights (dark)" /><br /><sub><b>Insights</b></sub></td>
-    <td align="center"><img src="docs/media/darksettings.png" width="240" alt="Settings (dark)" /><br /><sub><b>Settings</b></sub></td>
+    <td align="center"><img src="docs/media/darkinsights.png" width="240" alt="Insights (dark)" /><br /><sub><b>Insights</b><br />Trends & observations</sub></td>
+    <td align="center"><img src="docs/media/darksettings.png" width="240" alt="Settings (dark)" /><br /><sub><b>Settings</b><br />Theme, profile, perms</sub></td>
     <td></td>
   </tr>
 </table>
